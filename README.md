@@ -38,4 +38,4 @@ Java SDK 要求 JDK 版本 1.6 及以上
 		System.out.println( response.getContent());               
 	}
     
-    参考 example/SimpleExample 示例项目工程。改工程提供了付款、退款、微信公共号付款相关的 demo。
+    参考 example/ 示例代码。改工程提供了付款、退款、查询相关的方法调用示例。
