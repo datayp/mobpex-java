@@ -26,8 +26,6 @@ import java.util.Random;
  *
  */
 public class DemoTest extends TestCase {
-	// https://220.181.25.235/yop-center"; 测试地址  
-	//https://www.mobpex.com/yop-center 正式环境地址
     private String serverRoot = "https://www.mobpex.com/yop-center";
 	private String secretKey = "2121221";
 	private String appId = "15122404366710489367";
@@ -67,7 +65,6 @@ public class DemoTest extends TestCase {
 		prePayRequestDTO.setProductName("维多利亚的秘密");
 		prePayRequestDTO.setProductDescription("G cup");
 		prePayRequestDTO.setAmount("1.00");
-		prePayRequestDTO.setRequestIp("127.0.0.1");
 		mobpexRequest.addParam("prePayRequest", new Gson().toJson(prePayRequestDTO));
 		MobpexResponse mobpexResponse = MobpexClient.post("/rest/v1.0/pay/unifiedOrder".toLowerCase(), mobpexRequest);
 		GsonBuilder gb = new GsonBuilder();
@@ -90,8 +87,6 @@ public class DemoTest extends TestCase {
 	public void testRefund() throws IOException {
 		MobpexConfig.setAppId(appId);// yop应用
 		MobpexConfig.setSecretKey(secretKey);// yop应用密钥，需要和短信通知应用的密钥保持一致才行，否则验证签名不通过
-		// YopConfig.setServerRoot("https://open.yeepay.com/yop-center/");//生产环境
-		// MobpexConfig.setServerRoot("http://172.17.102.188:8093/yop-center");
 		MobpexConfig.setServerRoot(serverRoot);
 		MobpexConfig.setIgnoreSSLCheck(ignoreSSLCheck);
 		MobpexRequest request = new MobpexRequest();
@@ -100,10 +95,6 @@ public class DemoTest extends TestCase {
 		RefundRequestDTO refundRequest = new RefundRequestDTO();
 
 		refundRequest.setTradeNo("834153959836" ); // 商户订单号（商户退款流水号）
-		refundRequest.setDeviceId("" + r.nextInt(Integer.MAX_VALUE)); // 设备标识
-		refundRequest.setDeviceType("MOBILE"); // 设备类型
-		refundRequest.setRequestIp("127.0.0.1"); // 请求者终端IP
-		refundRequest.setRequestIdentification("apple"); // 请求者标识
 		refundRequest.setRefundNo(""+ r.nextInt(Integer.MAX_VALUE)); // 商户订单号，支付时的订单号
 		refundRequest.setAmount("0.01"); // 退款金额，单位元保留两位小数
 		refundRequest.setDescription("我要退款~~~");

@@ -40,7 +40,7 @@ Java SDK 要求 JDK 版本 1.6 及以上
 
 #### 查询可用支付渠道示例	
     //Mobpex对外提供的接口地址
-    MobpexConfig.setServerRoot("https://220.181.25.235/yop-center"); 
+    MobpexConfig.setServerRoot("https://www.mobpex.com/yop-center"); 
     //是否忽略响应服务器的域名检查
     MobpexConfig.setIgnoreSSLCheck(true);     
     //企业在Mobpex注册的应用ID；
@@ -67,8 +67,7 @@ Java SDK 要求 JDK 版本 1.6 及以上
 ```
 MobpexConfig.setAppId("151224043667104893");   //商户在Mobpex的应用ID
 MobpexConfig.setSecretKey("key值");            //密钥。请登录官网查询或修改密钥
-MobpexConfig.setServerRoot("https://220.181.25.235/yop-center");//Mobpex sdk接入地址
-//测试地址https://220.181.25.235/yop-center
+MobpexConfig.setServerRoot("https://www.mobpex.com/yop-center");//Mobpex sdk接入地址
 MobpexConfig.setIgnoreSSLCheck(true);  //是否忽略响应域名检查，使用测试地址时需要设置为true
 MobpexRequest mobpexRequest = new MobpexRequest();              //新建一个请求对象
 mobpexRequest.setUserId( "test168888@datayp.com");              //设置用户id
@@ -80,7 +79,6 @@ prePayRequestDTO.setPayType("APP");
 prePayRequestDTO.setProductName("维多利亚");                   
 prePayRequestDTO.setProductDescription("G");                   
 prePayRequestDTO.setAmount("1.00");                                
-prePayRequestDTO.setRequestIp("127.0.0.1");                        
 //将预支付请求dto序列化为json格式，作为参数添加到请求对象中
 mobpexRequest.addParam("prePayRequest",new Gson().toJson(prePayRequestDTO));
 //发起请求
