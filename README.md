@@ -96,7 +96,6 @@ if(mobpexResponse.isValidSign()){
 "state":"SUCCESS",                                  //操作是否成功，如果为SUCCESS则为成功
 "result":{                                          //result的内容为业务的响应结果
     "appId":"15122404177104893671",                 //应用id
-    "liveMode":false,                               //是否Live模式
     "errCode":"1",                                  //错误码  为1表示成功
     "errMsg":"成功",                                 //描述
     "orderId":"PO21b9gq09AFBWkQVJt4mdh23a6t3r6j80", //Mobpex订单号 
