@@ -1,0 +1,743 @@
+/*==============================
+文件名称：手机端支付渠道页面
+创建时间：20160407
+创 建 者：Jean peng
+版本：V1.0
+功能描述：
+
+===============================
+修 改 者：
+修改时间：
+修 改 点：
+==============================*/
+
+
+/*-------------------------------------------------------------------------------------------------------------------
+ 页面初始化
+-------------------------------------------------------------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  font-family:"微软雅黑",  "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+
+}
+html,body {
+  margin: 0px;
+  padding: 0px;
+  font-family:"微软雅黑",  "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  font-size:10px;
+  background: #fff;
+  color: #333;
+}
+
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+/*-------------------------------------------------------------------------------------------------------------------
+ 图标
+-------------------------------------------------------------------------------------------------------------------*/
+@font-face {font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot'); /* IE9*/
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:2rem;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-zhifubao:before { content: "\e600"; }
+.icon-right:before { content: "\e605"; }
+.icon-yeepay-logo:before { content: "\e602"; }
+.icon-weixinzhifu:before { content: "\e603"; }
+.icon-cuowu:before { content: "\e608"; }
+
+
+/*-------------------------------------------------------------------------------------------------------------------
+demo
+-------------------------------------------------------------------------------------------------------------------*/
+header.header{
+  text-align: center;
+  margin: 0 auto; 
+  margin-top:4.5rem;
+  font-size: 1.4rem;
+  position: relative;
+    animation:headerAnimation 2s ease-in;
+  -moz-animation:headerAnimation 2s ease-in;/* Firefox */
+  -webkit-animation:headerAnimation 2s ease-in; /* Safari 和 Chrome */
+  -o-animation:headerAnimation 2s ease-in;/* Opera */
+}
+
+
+
+
+header.header img{
+  width: 20rem;
+  animation:logoAnimation 2s ease-in;
+  -moz-animation:logoAnimation 2s ease-in;/* Firefox */
+  -webkit-animation:logoAnimation 2s ease-in; /* Safari 和 Chrome */
+  -o-animation:logoAnimation 2s ease-in;/* Opera */
+}
+
+header.header > p{
+  padding-top: 1.3rem;
+  animation:pAnimation 2s ease-in;
+  -moz-animation:pAnimation 2s ease-in;/* Firefox */
+  -webkit-animation:pAnimation 2s ease-in; /* Safari 和 Chrome */
+  -o-animation:pAnimation 2s ease-in;/* Opera */
+}
+header.header > p > span{
+  padding: 0 1.2rem;
+  display: inline-block;
+}
+header.header > p > span:first-child{
+  padding-left: 0; 
+  animation:fadeInLeft 500ms ease;
+  -moz-animation:fadeInLeft 500ms ease;/* Firefox */
+  -webkit-animation:fadeInLeft 500ms ease; /* Safari 和 Chrome */
+  -o-animation:fadeInLeft 500ms ease;/* Opera */
+}
+header.header > p > span:nth-child(2){
+  animation:fadeInRight 500ms ease;
+  -moz-animation:fadeInRight 500ms ease;/* Firefox */
+  -webkit-animation:fadeInRight 500ms ease; /* Safari 和 Chrome */
+  -o-animation:fadeInRight 500ms ease;/* Opera */
+}
+header.header > p > span:nth-child(3){
+  animation:fadeIntop 500ms ease;
+  -moz-animation:fadeIntop 500ms ease;/* Firefox */
+  -webkit-animation:fadeIntop 500ms ease; /* Safari 和 Chrome */
+  -o-animation:fadeIntop 500ms ease;/* Opera */
+}
+
+header.header > p > span:nth-child(4){
+  animation:fadeInbottom 500ms ease;
+  -moz-animation:fadeInbottom 500ms ease;/* Firefox */
+  -webkit-animation:fadeInbottom 500ms ease; /* Safari 和 Chrome */
+  -o-animation:fadeInbottom 500ms ease;/* Opera */
+}
+header.header > p > span:nth-child(5){
+  animation:fadeInRight 500ms ease;
+  -moz-animation:fadeInRight 500ms ease;/* Firefox */
+  -webkit-animation:fadeInRight 500ms ease; /* Safari 和 Chrome */
+  -o-animation:fadeInRight 500ms ease;/* Opera */
+}
+header.header > p > span:last-child{
+  padding-right: 0;
+    animation:fadeIntop 500ms ease;
+  -moz-animation:fadeIntop 500ms ease;/* Firefox */
+  -webkit-animation:fadeIntop 500ms ease; /* Safari 和 Chrome */
+  -o-animation:fadeIntop 500ms ease;/* Opera */
+}
+/*动画*/
+@keyframes headerAnimation{
+  0%{margin-top:20rem;font-size: 1.8rem;}
+  25%{margin-top:20rem;font-size: 1.8rem;}
+  50%{margin-top:20rem;font-size: 1.8rem;}
+  75%{margin-top:20rem;font-size: 1.8rem;}
+  100%{margin-top:4.5rem;font-size: 1.4rem;}
+}
+@-moz-keyframes headerAnimation{/* Firefox */
+  0%{margin-top:20rem;font-size: 1.8rem;}
+  25%{margin-top:20rem;font-size: 1.8rem;}
+  50%{margin-top:20rem;font-size: 1.8rem;}
+  75%{margin-top:20rem;font-size: 1.8rem;}
+  100%{margin-top:4.5rem;font-size: 1.4rem;}
+}
+@-webkit-keyframes headerAnimation{/* Safari 和 Chrome */
+  0%{margin-top:20rem;font-size: 1.8rem;}
+  25%{margin-top:20rem;font-size: 1.8rem;}
+  50%{margin-top:20rem;font-size: 1.8rem;}
+  75%{margin-top:20rem;font-size: 1.8rem;}
+  100%{margin-top:4.5rem;font-size: 1.4rem;}
+}
+@keyframes headerAnimation{/* Opera */
+  0%{margin-top:20rem;font-size: 1.8rem;}
+  25%{margin-top:20rem;font-size: 1.8rem;}
+  50%{margin-top:20rem;font-size: 1.8rem;}
+  75%{margin-top:20rem;font-size: 1.8rem;}
+  100%{margin-top:4.5rem;font-size: 1.4rem;}
+}
+
+
+
+
+
+@keyframes logoAnimation{
+  0%{width: 24rem;}
+  25%{width: 24rem;}
+  50%{width: 24rem;}
+  75%{width: 24rem;}
+  100%{width: 20rem;}
+}
+@-moz-keyframes logoAnimation{/* Firefox */
+    0%{width: 24rem;}
+  25%{width: 24rem;}
+  50%{width: 24rem;}
+  75%{width: 24rem;}
+  100%{width: 20rem;}
+}
+@-webkit-keyframes logoAnimation{/* Safari 和 Chrome */
+  0%{width: 24rem;}
+  25%{width: 24rem;}
+  50%{width: 24rem;}
+  75%{width: 24rem;}
+  100%{width: 20rem;}
+}
+@-o-keyframes logoAnimation{/* Opera */
+  0%{width: 24rem;}
+  25%{width: 24rem;}
+  50%{width: 24rem;}
+  75%{width: 24rem;}
+  100%{width: 20rem;}
+}
+
+
+
+@keyframes pAnimation{
+  0%{letter-spacing: .3rem;}
+  25%{letter-spacing: .3rem;}
+  50%{letter-spacing: .3rem;}
+  75%{letter-spacing: .3rem;}
+  100%{letter-spacing: 0rem;}
+}
+@-moz-keyframes pAnimation{/* Firefox */
+  0%{letter-spacing: .3rem;}
+  25%{letter-spacing: .3rem;}
+  50%{letter-spacing: .3rem;}
+  75%{letter-spacing: .3rem;}
+  100%{letter-spacing: 0rem;}
+}
+@-webkit-keyframes pAnimation{/* Safari 和 Chrome */
+  0%{letter-spacing: .3rem;}
+  25%{letter-spacing: .3rem;}
+  50%{letter-spacing: .3rem;}
+  75%{letter-spacing: .3rem;}
+  100%{letter-spacing: 0rem;}
+}
+@-o-keyframes pAnimation{/* Opera */
+  0%{letter-spacing: .3rem;}
+  25%{letter-spacing: .3rem;}
+  50%{letter-spacing: .3rem;}
+  75%{letter-spacing: .3rem;}
+  100%{letter-spacing: 0rem;}
+}
+
+
+@keyframes hiddenAnimation{
+  0%{opacity: 0}
+  25%{opacity: 0}
+  50%{opacity: 0}
+  75%{opacity: 0}
+  100%{opacity: 1}
+}
+@-moz-keyframes hiddenAnimation{/* Firefox */
+  0%{padding: 1.6rem;}
+  25%{padding: 1.6rem;}
+  50%{padding: 1.6rem;}
+  75%{padding: 1.6rem;}
+  100%{padding: 1.2rem;}
+}
+@-webkit-keyframes hiddenAnimation{/* Safari 和 Chrome */
+  0%{opacity: 0}
+  25%{opacity: 0}
+  50%{opacity: 0}
+  75%{opacity: 0}
+  100%{opacity: 1}
+}
+@-o-keyframes hiddenAnimation{/* Opera */
+  0%{padding: 1.6rem;}
+  25%{padding: 1.6rem;}
+  50%{padding: 1.6rem;}
+  75%{padding: 1.6rem;}
+  100%{padding: 1.2rem;}
+}
+
+
+/* 文字动画 */
+/* 左斜上角 */
+@-webkit-keyframes fadeInLeft{
+  0% {
+  opacity:0;
+  -webkit-transform:translate(-10rem,-60rem);
+          transform:translate(-10rem,-60rem);
+      -ms-transform:translate(-10rem,-60rem);
+  }
+  100% {
+  opacity:1;
+  -webkit-transform:translateX(0);
+  transform:translateX(0)
+  }
+}
+@keyframes fadeInLeft{
+  0% {
+  opacity:0;
+  -webkit-transform:translate(-10rem,-60rem);
+          transform:translate(-10rem,-60rem);
+      -ms-transform:translate(-10rem,-60rem);
+  }
+  100% {
+  opacity:1;
+  -webkit-transform:translateX(0);
+  -ms-transform:translateX(0);
+  transform:translateX(0)
+  }
+}
+/* 右斜上角 */
+@-webkit-keyframes fadeInRight{
+  0% {
+  opacity:0;
+  -webkit-transform:translate(60rem,10rem);
+          transform:translate(60rem,10rem);
+      -ms-transform:translate(60rem,10rem);
+  }
+  100% {
+  opacity:1;
+  -webkit-transform:translateX(0);
+  transform:translateX(0)
+  }
+}
+@keyframes fadeInRight{
+  0% {
+  opacity:0;
+  -webkit-transform:translate(60rem,10rem);
+          transform:translate(60rem,10rem);
+      -ms-transform:translate(60rem,10rem);
+  }
+  100% {
+  opacity:1;
+  -webkit-transform:translateX(0);
+  -ms-transform:translateX(0);
+  transform:translateX(0)
+  }
+}
+
+@-webkit-keyframes fadeInbottom{
+  0% {
+  opacity:0;
+  -webkit-transform:translate(-30rem,-40rem);
+          transform:translate(-30rem,-40rem);
+      -ms-transform:translate(-30rem,-40rem);
+  }
+  100% {
+  opacity:1;
+  -webkit-transform:translateX(0);
+  transform:translateX(0)
+  }
+}
+@keyframes fadeInbottom{
+  0% {
+  opacity:0;
+  -webkit-transform:translate(-30rem,-40rem);
+          transform:translate(-30rem,-40rem);
+      -ms-transform:translate(-30rem,-40rem);
+  }
+  100% {
+  opacity:1;
+  -webkit-transform:translateX(0);
+  -ms-transform:translateX(0);
+  transform:translateX(0)
+  }
+}
+
+@-webkit-keyframes fadeIntop{
+  0% {
+  opacity:0;
+  -webkit-transform:translate(20rem,-35rem);
+          transform:translate(20rem,-35rem);
+      -ms-transform:translate(20rem,-35rem);
+  }
+  100% {
+  opacity:1;
+  -webkit-transform:translateX(0);
+  transform:translateX(0)
+  }
+}
+@keyframes fadeIntop{
+  0% {
+  opacity:0;
+  -webkit-transform:translate(20rem,-35rem);
+          transform:translate(20rem,-35rem);
+      -ms-transform:translate(20rem,-35rem);
+  }
+  100% {
+  opacity:1;
+  -webkit-transform:translateX(0);
+  -ms-transform:translateX(0);
+  transform:translateX(0)
+  }
+}
+
+section .content{
+  margin: 0 3.7rem 0;
+  background:#fff ;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background:#fff;
+  line-height: 1;
+  position: relative;
+}
+
+section > .content .btn{
+  background: #4BB0F8;
+  height: 4.5rem;
+  color: #fff;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: .2rem;
+  margin-top: 14rem;
+  margin-bottom: 2rem;
+ letter-spacing: .1rem;
+   animation:hiddenAnimation 4s ease-in;
+  -moz-animation:hiddenAnimation 4s ease-in;/* Firefox */
+  -webkit-animation:hiddenAnimation 4s ease-in; /* Safari 和 Chrome */
+  -o-animation:hiddenAnimation 4s ease-in;/* Opera */
+
+}
+section > .content .pay-panel{
+  padding:3rem;
+  box-shadow:0rem 0rem 1rem #ddd;
+  margin: 6rem 0 0;
+  animation:hiddenAnimation 3s ease-in;
+  -moz-animation:hiddenAnimation 3s ease-in;/* Firefox */
+  -webkit-animation:hiddenAnimation 3s ease-in; /* Safari 和 Chrome */
+  -o-animation:hiddenAnimation 3s ease-in;/* Opera */
+}
+section > .content > .ico{
+  text-align: center;
+  padding-top: 3.6rem;
+}
+section > .content > .ico > .iconfont{
+  font-size: 8.5rem;
+  line-height: 7.5rem;
+}
+section > .content > .ico p{
+  padding-top: 1.5rem;
+}
+section > .content > .ico >.money{
+  font-size: 2.4rem;
+}
+section > .content > .ico >.money span{
+   font-size: 1.6rem;
+   color: #999;
+}
+section > .content > .ico >.pay-state{
+  font-size: 1.6rem;
+}
+section > .content > .ico >.pay-end{
+  padding-top:3rem;
+  font-size:1.4rem;
+}
+.iconfont.success{
+  color: #6fd74f;
+}
+.iconfont.fail{
+  color: #cd5b39;
+}
+section > .content label{
+  color: #333;
+  padding-right:1.3rem;
+  display: inline-block;
+}
+section > .content  .order-line{
+  padding: 1rem 0;
+
+}
+section > .content .value{
+  display: inline-block;
+}
+
+section > .content .value span{
+ color: #999;
+ font-size: 1.2rem;
+}
+footer > .pay-channel{
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2rem);
+  background: #fff;
+   z-index: 2;
+   left: 1rem;
+   border-radius: .5rem;
+   bottom: 2rem;
+   display: none;
+}
+
+
+footer > .pay-channel button{
+  display: block;
+  background: #fff;
+  width: 100%; 
+  height:4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #E8E8E8;
+}
+footer > .pay-channel button:first-child{
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+footer > .pay-channel button:last-child{
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+footer > .pay-channel button .iconfont{
+    font-size: 2rem;
+  margin-right:1.5rem;
+}
+.iconfont.alipay{
+  color:#1995ff
+}
+.iconfont.weipay{
+  color:#41ac00
+}
+.iconfont.yeepay{
+  color:#41ac00
+}
+.yinliang{
+  width: 2rem;
+   margin-right:1.5rem;
+   padding-top:.8rem;
+}
+
+.modelback {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #000;
+    opacity: .5;
+    display: none;
+}
+footer > .erweima{
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  background: #fff;
+   z-index: 2;
+   bottom: 3rem;
+   text-align: center;
+   font-size: 1.2rem;
+   color: #999;
+
+  
+ }
+footer > .erweima >img{
+  width:13.3rem;
+   margin: 0 auto;
+   margin-bottom: 1.5rem;
+}
+@media screen and (max-width:1920px){
+  html,body{ font-size:2em;}
+
+}
+@media screen and (max-width:1280px){
+  html,body{ font-size:2em;}
+}
+@media screen and (max-width:1024px){
+  html,body{ font-size:1.4em;}
+}
+@media screen and (max-width:768px){
+  html,body{ font-size:1.5em;}
+}
+@media screen and (max-width:720px){
+  html,body{ font-size:1.4em;}
+}
+@media screen and (max-width:640px){
+  html,body{ font-size:1.2em;}
+}
+
+@media screen and (max-width:480px){
+    html,body{ font-size:0.825em;}
+
+}
+@media screen and (max-width:414px){
+ html,body{font-size:0.725em;}
+}
+@media screen and (max-width:375px){
+ html,body{font-size:0.725em;}
+}
+@media screen and (max-width:360px){
+ html,body{ font-size:0.625em;}
+ 
+}
+@media screen and (max-width:320px){
+   html,body{ font-size:0.625em;}
+   section .content {
+    margin: 4.5rem 2rem 0;
+   }
+   section > .content > .ico {
+    padding-top: .6rem;
+}
+   section > .content .btn {   
+    margin-top: 8rem;  
+  }
+
+}
+
+@media screen and (max-height:435px){
+  html, body {
+      font-size: 1.4em;
+  }
+
+}
+@media screen and (max-height:375px){
+  html, body {
+      font-size: 1.3em;
+  }
+
+}
+@media screen and (max-height:360px){
+  section > .content .pay-panel {
+    padding: 1.5rem 3rem;
+      margin: 2rem 0 0;
+  }
+  section > .content .btn {
+    margin-top: 4rem;
+   margin-bottom: 2rem;
+  }
+
+}
+@media screen and (max-height:320px){
+  html, body {
+      font-size: 1em;
+  }
+
+}
+@media screen and (max-height:568px){
+
+  section > .content > .ico >.pay-end {
+    padding-top: 1.5rem;
+}
+}
+@media screen and (min-height:1024px){
+  section > .content > .ico >.pay-end{
+    padding-top:1.5rem;
+  }
+  footer > .erweima {
+    bottom: 1rem;
+  }
+}

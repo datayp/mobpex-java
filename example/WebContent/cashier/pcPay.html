@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<title>MobPex</title>
+<link href="css/cashier.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav>
+  <div class="navbar"><a class="navbar-brand" href="#"> <img alt="mobpex" src="images/logo-lan.jpg" class="logo"> </a><span class="page-title">收银台</span> </div>
+</nav>
+<div class="order-status"><i class="iconfont sucess">&#xe604;</i>
+  <div class="right">
+    <div class="line"> <span class="closeDIV" id="closeBtn">展开详情 <i class="iconfont">&#xe602;</i></span>
+      <h4>订单提交成功！请尽快支付！</h4>
+      <p>应付总金额 <strong>0.01</strong> 元
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单号：test20160616180311</p>
+    </div>
+    <div class="commodity-infor" id="commodityInfor">
+      <dl>
+        <dt>商品名称：</dt>
+        <dd>测试</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+<div class="container" id="js_pay">
+  <div class="order-pay">
+    <h5>请选择以下方式付款</h5>
+    <ul class="paylist">
+      <li><img alt="mobpex" src="images/yeepay.jpg" data-value="YEEPAY" payType="WEB" id="js_yeepay"></li>
+      <li><img alt="mobpex" src="images/alipay.jpg" data-value="ALIPAY" payType="WEB" id="js_alipay"></li>
+      <li><img alt="mobpex" src="images/unionpay.jpg" data-value="UPACP" payType="WEB" id="js_unionpay"></li>
+      <li><img alt="mobpex" src="images/weixinpay.png" data-value="WECHAT" payType="NATIVE" id="js_weixingpay"></li>
+      <!-- <li><img alt="mobpex" src="images/jdpay.jpg" data-value="JDPAY" payType="WEB" id="js_jdpay"></li> -->
+    </ul>
+  </div>
+</div>
+<div class="container weixing" id="js_weixingcon">
+<h5><small class="right" id="js_otherpay"><i class="iconfont">&#xe605;</i>选择其它支付方式</small>微信支付</h5>
+<div class="weixing-msg"><p>请在<b class="red">2小时</b>内支付，二维码过期后请刷新页面重新获取二维码。</p></div>
+  <div class="weixing-pay">
+    <div class="left"><!-- <img src="images/erweima.jpg" alt="微信二维码"> -->
+      <div id="qrPic"></div>
+      <div class="icop"><i class="iconfont">&#xe600;</i>
+        <p>打开微信客户端<br/>
+          扫一扫完成付款</p>
+      </div>
+    </div>
+    <div class="right"><img src="images/weixing-phone.jpg" alt="微信二维码" id="noHref"></div>
+    <input type="hidden" id="codeUrl" value="" />
+  </div>
+</div>
+
+<script type="text/javascript" src="../script/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../script/jquery.qrcode.min.js"></script>
+<script src="js/cashier.js"></script>
+<script type="text/javascript" src="js/mobpex-js-sdk-pc.js"></script>
+<script type="text/javascript" src="js/your-js-forpc.js"></script>
+<script type="text/javascript" src="../script/ap.js"></script>
+
+</body>
+</html>

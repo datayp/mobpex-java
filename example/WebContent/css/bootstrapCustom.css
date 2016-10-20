@@ -1,0 +1,652 @@
+
+/*==============================
+文件名称：bootstrap框架公共CSS
+创建时间：20151223
+创 建 者：Jean peng
+版本：V1.0
+功能描述：魔派修改Bootstrap默认框架CSS
+
+===============================
+修 改 者：
+修改时间：
+修 改 点：
+==============================*/
+
+
+
+body {
+  font-family:"微软雅黑", Helvetica Neue, Helvetica, Arial, sans-serif; 
+  line-height: 1;
+  color: #333;
+
+}
+
+a {
+    color: #00a3e5;
+}
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1030px;
+  }
+}
+label {
+  font-weight:normal;
+}
+h3,
+.h3 {
+  font-size: 16px; font-weight: 700;
+}
+
+.form-control{
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 6px 15px;
+  color: #ccc;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-horizontal > .form-group > .control-label{
+  padding-right: 15px;
+}
+.form-horizontal .control-label{
+  text-align: left;
+}
+.page-header{margin-top: 20px;border-bottom: 1px solid #dbdbdb;padding-bottom:0px; }
+.pagination{margin:0;}
+.nav-tabs > li > a{
+    border-radius: 0;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 0;
+    padding: 0px 2px 18px 2px;
+    margin-right: 40px;
+    font-weight: 400;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------
+ 按钮大小
+-------------------------------------------------------------------------------------------------------------------*/
+.btn{
+  padding:10px 30px;
+  border-radius: 2px;
+  border-radius: 2px;
+}
+.btn-sm, .btn-group-sm > .btn {
+  padding:5px 20px;
+   font-size:14px;
+  line-height:1.5;
+  border-radius:2px;
+}
+.btn-xs, .btn-group-xs > .btn {
+  padding:5px 20px;
+  font-size:14px;
+  line-height:1.5;
+  border-radius:2px;
+}
+
+
+  
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:focus,
+.btn-default.focus {
+  color: #fff;
+  background-color: #40b1f9;
+  border-color: #40b1f9;
+}
+.btn-default:hover {
+ color: #333;
+  background-color: #fff;
+  border-color: #40b1f9;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+ color: #333;
+  background-color: #fff;
+  border-color: #40b1f9;
+}
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+  color: #333;
+  background-color: #fff;
+  border-color: #40b1f9;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  background-image: none;
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+   background: none;
+   color: #ccc;
+   text-decoration: none;
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+
+  background-color: #fff;
+  border-color: #f2f2f2;
+}
+.btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+.btn-primary {
+  color:#fff;
+  background-color:#428bca;
+  border-color:#357ebd;
+}
+
+.btn-info {
+  color:#fff;
+  background-color:#40b1f9;
+  border-color:#40b1f9;
+}
+.btn-success {
+  color:#fff;
+  background-color:#3CC051;
+  border-color:#4cae4c;
+}
+.btn-edit {
+  color:#fff;
+  background-color:#A997F4;
+  border-color:#9B86F2;
+}
+.btn-warning {
+  color:#fff;
+  background-color:#FF942B;
+  border-color:#eea236;
+}
+.btn-danger {
+  color:#fff;
+  background-color:#FF5A39;
+  border-color:#F92C00;
+}
+.ico-success {
+  color: #3CC051
+} 
+
+.text-warning {
+    color: #FF712B;
+}
+/*-------------------------------------------------------------------------------------------------------------------
+ 栅格边距大小
+-------------------------------------------------------------------------------------------------------------------*/
+.container-fluid {
+  padding-right:10px;
+  padding-left:10px;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position:relative;
+  min-height:1px;
+  padding-right:10px;
+  padding-left:10px;
+}
+/*-------------------------------------------------------------------------------------------------------------------
+ 表格
+-------------------------------------------------------------------------------------------------------------------*/
+
+.table,.table-responsive {
+  border-radius: 0px;
+  margin-bottom: 0px;
+
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  padding:4px 4px 4px 10px;
+  line-height:3;/* vertical-align:top;*/
+  border-top:1px solid #f5f5f5;
+  font-weight: 400;
+  color: #333;
+
+}
+.table > thead > tr > th {
+  vertical-align:middle;
+  border-bottom:1px solid #DFDFDF;
+  /*background: #EFEFEF;*/
+}
+.table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {
+  border-top:0;
+  border-bottom:0px; 
+}
+.table > tbody + tbody {
+  border-top:1px solid #f2f2f2;
+}
+.table .table {
+  background-color:#fff;
+}
+.table-condensed > thead > tr > th, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {
+  padding:5px;
+}
+.table-bordered {
+  border:1px solid #f2f2f2;
+}
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+  border:1px solid #f2f2f2;
+}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+  border-bottom-width:1px;
+}
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+background-color:#fcfcfc;
+}
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+  background-color:#fafafa;
+}
+
+.table > thead > tr > td.active, .table > tbody > tr > td.active, .table > tfoot > tr > td.active, .table > thead > tr > th.active, .table > tbody > tr > th.active, .table > tfoot > tr > th.active, .table > thead > tr.active > td, .table > tbody > tr.active > td, .table > tfoot > tr.active > td, .table > thead > tr.active > th, .table > tbody > tr.active > th, .table > tfoot > tr.active > th {
+  background-color:#f5f5f5;
+}
+.table-hover > tbody > tr > td.active:hover, .table-hover > tbody > tr > th.active:hover, .table-hover > tbody > tr.active:hover > td, .table-hover > tbody > tr.active:hover > th {
+  background-color:#e8e8e8;
+}
+.table > thead > tr > td.success, .table > tbody > tr > td.success, .table > tfoot > tr > td.success, .table > thead > tr > th.success, .table > tbody > tr > th.success, .table > tfoot > tr > th.success, .table > thead > tr.success > td, .table > tbody > tr.success > td, .table > tfoot > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr.success > th, .table > tfoot > tr.success > th {
+  background-color:#dff0d8;
+}
+.table-hover > tbody > tr > td.success:hover, .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr.success:hover > th {
+  background-color:#d0e9c6;
+}
+.table > thead > tr > td.info, .table > tbody > tr > td.info, .table > tfoot > tr > td.info, .table > thead > tr > th.info, .table > tbody > tr > th.info, .table > tfoot > tr > th.info, .table > thead > tr.info > td, .table > tbody > tr.info > td, .table > tfoot > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr.info > th, .table > tfoot > tr.info > th {
+  background-color:#d9edf7;
+}
+.table-hover > tbody > tr > td.info:hover, .table-hover > tbody > tr > th.info:hover, .table-hover > tbody > tr.info:hover > td, .table-hover > tbody > tr.info:hover > th {
+  background-color:#c4e3f3;
+}
+.table > thead > tr > td.warning, .table > tbody > tr > td.warning, .table > tfoot > tr > td.warning, .table > thead > tr > th.warning, .table > tbody > tr > th.warning, .table > tfoot > tr > th.warning, .table > thead > tr.warning > td, .table > tbody > tr.warning > td, .table > tfoot > tr.warning > td, .table > thead > tr.warning > th, .table > tbody > tr.warning > th, .table > tfoot > tr.warning > th {
+  background-color:#fcf8e3;
+}
+.table-hover > tbody > tr > td.warning:hover, .table-hover > tbody > tr > th.warning:hover, .table-hover > tbody > tr.warning:hover > td, .table-hover > tbody > tr.warning:hover > th {
+  background-color:#faf2cc;
+}
+.table > thead > tr > td.danger, .table > tbody > tr > td.danger, .table > tfoot > tr > td.danger, .table > thead > tr > th.danger, .table > tbody > tr > th.danger, .table > tfoot > tr > th.danger, .table > thead > tr.danger > td, .table > tbody > tr.danger > td, .table > tfoot > tr.danger > td, .table > thead > tr.danger > th, .table > tbody > tr.danger > th, .table > tfoot > tr.danger > th {
+  background-color:#f2dede;
+}
+.table-hover > tbody > tr > td.danger:hover, .table-hover > tbody > tr > th.danger:hover, .table-hover > tbody > tr.danger:hover > td, .table-hover > tbody > tr.danger:hover > th {
+  background-color:#ebcccc;
+}
+.table > tbody > tr > td>a,.table > tbody  > tr > td>a:hover,.table > tbody  > tr > td>a:focus{
+  text-decoration: none;
+  color: rgb(95, 95, 95);
+  font-weight: 200;
+}
+/*.table td,.table th{
+  color: rgb(95, 95, 95);
+  font-weight: 200;
+}*/
+/*-------------------------------------------------------------------------------------------------------------------
+ 顶部导航
+-------------------------------------------------------------------------------------------------------------------*/
+
+/*高度*/
+
+.navbar {
+  min-height: 65px;
+  margin-bottom: 1px;
+
+}
+.navbar-brand {
+  height: 65px;
+  padding: 3px 15px;
+  font-size: 16px;
+  line-height: 50px;
+}
+.navbar-nav > li{
+  padding: 14px 1px;
+  line-height: 20px;
+  font-size: 16px;
+
+}
+
+.navbar-right > li:hover{
+  border-bottom:0;
+}
+.navbar-nav > li > a {
+ padding:5px 14px;
+}
+ .navbar-left > li{
+  padding: 0 30px;
+}
+.navbar-left > li a{
+  display: block;
+  padding: 22px 0 18px;
+}
+.navbar-right > li a{
+   padding:7px 14px;
+}
+
+/*颜色 */
+.navbar-frame{
+   
+
+
+}
+.navbar-frame .navbar-brand {
+  color: #fff;
+}
+.navbar-frame .navbar-brand:hover,
+.navbar-frame .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-frame .navbar-text {
+  color: #fff;
+}
+.navbar-frame .navbar-nav > li > a {
+  color: #fff;
+ 
+}
+.navbar-sen .navbar-nav > li > a:hover,
+.navbar-sen .navbar-nav > li > a:focus,
+.navbar-frame .navbar-nav > li > a:hover,
+.navbar-frame .navbar-nav > li > a:focus {
+  background: none;
+ 
+}
+
+.navbar-frame .navbar-nav > li > a:hover,
+.navbar-frame .navbar-nav > li > a:focus {
+  color: #fff;
+ 
+}
+.navbar-frame .navbar-nav > .active > a,
+.navbar-frame .navbar-nav > .active > a:hover,
+.navbar-frame .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #0077d1
+}
+.navbar-frame .navbar-nav > .disabled > a,
+.navbar-frame .navbar-nav > .disabled > a:hover,
+.navbar-frame .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-frame .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-frame .navbar-toggle:hover,
+.navbar-frame .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-frame .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-frame .navbar-collapse,
+.navbar-frame .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-frame .navbar-nav > .open > a,
+.navbar-frame .navbar-nav > .open > a:hover,
+.navbar-frame .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .navbar-frame .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+  }
+  .navbar-frame .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-frame .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-frame .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-frame .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-frame .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-frame .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-frame .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-frame .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-frame .navbar-link {
+  color: #fff;
+}
+.navbar-frame .navbar-link:hover {
+  color: #333;
+}
+.navbar-frame .btn-link {
+  color: #fff;
+}
+.navbar-frame .btn-link:hover,
+.navbar-frame .btn-link:focus {
+  color: #333;
+}
+.navbar-frame .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-frame .btn-link:hover,
+.navbar-frame .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-frame .btn-link:focus {
+  color: #ccc;
+}
+
+.navbar-right li > a{ 
+  border-radius: 4px;
+  
+}
+.navbar-frame .navbar-right li > a{
+border: 1px solid #40B1F9;
+}
+
+
+.navbar-sen .navbar-nav > li > a {
+  color: #333;
+}
+
+.navbar-frame  .navbar-left > li a:hover{
+  border-bottom:4px solid #fff;
+}
+
+.navbar-frame{
+  background: #40B1F9;
+ 
+}
+
+.navbar-frame .navbar-right li > a:hover{
+  background:  #fff;
+  color:#40B1F9;
+  border: 1px solid #fff;
+}
+.navbar-sen{
+  background: #fff;
+  -webkit-box-shadow:inset 0 0 38px #0c0407;  
+     -moz-box-shadow:inset 0 0 38px #0c0407;  
+          box-shadow:0 0 38px #dddddd;
+}
+.navbar-sen .navbar-right li > a{
+border: 1px solid #fff;
+}
+.navbar-sen  .navbar-left > li a:hover{
+  border-bottom:4px solid #40B1F9;
+}
+
+.navbar-sen .navbar-right li > a:hover{
+  background: #23a4f6;
+  color: #fff;
+}
+/*-------------------------------------------------------------------------------------------------------------------
+ 弹出框颜色
+-------------------------------------------------------------------------------------------------------------------*/
+.alert-success {
+  color: #3c763d;
+  background-color: #F0FBF2;
+  border-color: #d6e9c6;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+/*-------------------------------------------------------------------------------------------------------------------
+下拉框
+-------------------------------------------------------------------------------------------------------------------*/
+.dropdown-menu{
+  border-radius: 0;
+  margin: 0;
+  border:0;
+}
+.dropdown-menu > li > a {
+  padding: 18px 25px;
+}
+/*-------------------------------------------------------------------------------------------------------------------
+面板
+-------------------------------------------------------------------------------------------------------------------*/
+/*.panel {
+   
+    border-radius: 0;   
+}*/
+/*.panel-body{
+  padding:25px 30px;
+  
+}*/
+
+.panel{
+     border: 0;
+    border-radius: 0px;  
+    margin-bottom: 30px;  
+}
+.panel-body{
+  padding:25px 30px;
+
+}
+.panel-footer{
+  border: 0px;
+  padding: 0px;
+}
+.panel-noShadow{
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+}
+/*-------------------------------------------------------------------------------------------------------------------
+ 开关组件
+-------------------------------------------------------------------------------------------------------------------*/
+.bootstrap-switch{border-radius: 3px;line-height: 24px;border-color: #40b1f9}
+.bootstrap-switch .bootstrap-switch-container{border-radius: 3px;}
+.bootstrap-switch .bootstrap-switch-handle-on{
+      border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+}
+.bootstrap-switch.bootstrap-switch-xmini .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-xmini .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-xmini .bootstrap-switch-label {
+  padding: 0px 5px;
+  line-height: 24px;
+
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success {
+  color: #fff;
+  background: #40b1f9;
+/*  -webkit-box-shadow:inset 0 0 10px #0CC;  
+  -moz-box-shadow:inset 0 0 10px #0CC; */
+ /* box-shadow:inset 4px 1px 2px #000;*/
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
+  color: #999;
+  background: #f2f2f2;
+}
+.form-switch{
+  padding-top: 2px;
+}
+
+/*分页**/
+.pagination > li>a{
+    display: inline;
+    margin: 0px 0px 10px 7px;
+    color: #777; 
+}
+.pagination-sm > li> a, .pagination-sm > li > span {
+    border-radius: 3px;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #40b1f9;
+    border-color: #40b1f9;
+}
+.input-group-addon {
+    background: #fcfcfc;
+    color: #999;
+    font-weight: 200;
+    border-radius: 0px 2px 2px 0px;
+}
+/*图片**/
+.img-thumbnail{
+  border-radius: 2px; 
+}
+/*
+.modal-body{
+  padding-left: 30px;
+  padding-right: 30px;
+}*/
+.modal-footer{
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 30px;
+}
+
+.form-control-static{
+  padding-bottom: 0px;
+  min-height: 14px;
+
+}
+/*-------------------------------------------------------------------------------------------------------------------
+ 开关组件
+-------------------------------------------------------------------------------------------------------------------*/
+.modal-content {
+    border-radius: 2px;
+}

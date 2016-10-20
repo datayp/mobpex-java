@@ -1,0 +1,362 @@
+/*==============================
+文件名称：手机端支付渠道页面
+创建时间：20160407
+创 建 者：Jean peng
+版本：V1.0
+功能描述：
+
+===============================
+修 改 者：
+修改时间：
+修 改 点：
+==============================*/
+
+
+/*-------------------------------------------------------------------------------------------------------------------
+ 页面初始化
+-------------------------------------------------------------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  font-family:"微软雅黑",  "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+
+}
+html,body {
+  margin: 0px;
+  padding: 0px;
+  font-family:"微软雅黑",  "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  font-size:10px;
+  line-height:1.5rem;
+  background: #E4E4E4;
+  color: #333;
+}
+
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+/*-------------------------------------------------------------------------------------------------------------------
+ 图标
+-------------------------------------------------------------------------------------------------------------------*/
+@font-face {font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot'); /* IE9*/
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:2rem;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-check:before { content: "\e600"; }
+.icon-close:before { content: "\e601"; }
+.icon-lock:before { content: "\e602"; }
+.icon-yonghu:before { content: "\e603"; }
+.icon-yingyongzhongxin:before { content: "\e604"; }
+.icon-iconfont22:before { content: "\e618"; }
+.icon-fold:before { content: "\e605"; }
+.icon-search:before { content: "\e606"; }
+.icon-unfold:before { content: "\e607"; }
+.icon-back:before { content: "\e608"; }
+.icon-droparrow:before { content: "\e609"; }
+.icon-right:before { content: "\e60a"; }
+.icon-uparrow:before { content: "\e60b"; }
+.icon-yeepay-logo:before { content: "\e61b"; }
+.icon-mimayaochi:before { content: "\e60c"; }
+.icon-31tishi:before { content: "\e617"; }
+.icon-add:before { content: "\e60d"; }
+.icon-move:before { content: "\e60e"; }
+.icon-yinlian:before { content: "\e61c"; }
+.icon-weixinzhifu:before { content: "\e61d"; }
+.icon-qiye:before { content: "\e60f"; }
+.icon-gantanhao:before { content: "\e615"; }
+.icon-zhifufangshi:before { content: "\e614"; }
+.icon-zhifubao:before { content: "\e61e"; }
+.icon-cgxiazai:before { content: "\e610"; }
+.icon-riliico:before { content: "\e611"; }
+.icon-dingdan:before { content: "\e612"; }
+.icon-sort-down-copy:before { content: "\e619"; }
+.icon-sort-down-copy-copy:before { content: "\e61a"; }
+.icon-quxiantu:before { content: "\e613"; }
+.icon-chenggong:before { content: "\e616"; }
+
+/*-------------------------------------------------------------------------------------------------------------------
+支付渠道
+-------------------------------------------------------------------------------------------------------------------*/
+section .content{
+  margin: 3rem 1.6rem 0rem;
+  background:#fff ;
+  padding: 5.9rem 3rem 8rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  background:#fff url(../images/order-bg.jpg) bottom repeat-x;
+}
+section > .content > h3{
+  font-size: 2rem;
+  padding-bottom: 3rem;
+  font-weight: 300;
+  text-align: center;
+}
+section > .content > h3 > .iconfont{
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+.iconfont.success{
+  color: #7bbe33;
+}
+.iconfont.fail{
+  color: #e60000;
+}
+section > .content label{
+  color: #999;
+  padding-right:1.6rem;
+  display: inline-block;
+}
+section > .content  .order-line{
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #E4E4E4;
+
+}
+section > .content .value{
+  display: inline-block;
+}
+footer > .pay-channel{
+  position: absolute;
+  bottom: 0;
+  padding:3rem 1.5rem 1.5rem;
+  width: 100%;
+}
+footer > .pay-channel >h4{
+  color: #999;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+footer > .pay-channel button{
+  display: block;
+  background: #fff;
+  width: 100%; 
+  height: 3.4rem;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.7rem;
+}
+footer > .pay-channel button .iconfont{
+    font-size: 2rem;
+  margin-right:0.5rem;
+}
+.iconfont.alipay{
+  color:#1995ff
+}
+.iconfont.weipay{
+  color:#41ac00
+}
+.iconfont.yeepay{
+  color:#41ac00
+}
+.yinliang{
+  width: 2rem;
+   margin-right:0.5rem;
+}
+
+
+
+@media screen and (max-width:1920px){
+  body{ font-size:4em;}
+}
+@media screen and (max-width:1280px){
+  body{ font-size:2.9em;}
+}
+@media screen and (max-width:1024px){
+  body{ font-size:2.3em;}
+}
+@media screen and (max-width:768px){
+  body{ font-size:1.8em;}
+}
+@media screen and (max-width:720px){
+  body{ font-size:1.6em;}
+}
+@media screen and (max-width:640px){
+    body{ font-size:1.5em;}
+}
+
+@media screen and (max-width:480px){
+    body{ font-size:1em;}
+
+}
+@media screen and (max-width:414px){
+
+}
+@media screen and (max-device-width:375px){
+  section .content,
+  section > .content label,
+  footer > .pay-channel >h4{
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width:360px){
+ body{ font-size:0.825em;}
+  section .content,
+  section > .content label,
+  footer > .pay-channel >h4{
+    font-size: 1.4rem;
+  }
+}
+
+
+@media screen and (max-width:320px){
+   body{ font-size:0.725em;}
+    section .content,
+    section > .content label,
+    footer > .pay-channel >h4{
+      font-size: 1.4rem;
+    }
+    footer > .pay-channel button{
+    height: 3rem;
+    font-size: 1.8rem;
+  }
+   section .content{
+     margin: 2rem 1rem 0rem;
+     padding: 3.4rem 1rem 5rem;
+    }
+    section > .content > h3{
+      padding-bottom: 2rem;
+    }
+    section > .content label{
+      padding-right:0.8rem;
+    }
+    footer > .pay-channel{
+      padding:3rem 1rem 1rem;
+    }
+
+}
+@media screen and (max-height:640px){
+   section .content{
+    padding: 5rem 2rem 6rem;
+  }
+}
+@media screen and (min-height:736px){
+  footer > .pay-channel button{
+    height: 4rem;
+  }
+}

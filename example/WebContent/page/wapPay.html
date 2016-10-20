@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MobPex支付体验</title>
+<link rel="stylesheet" type="text/css" href="../styles/public2.css">
+</head>
+
+<body>
+
+
+  <form >
+<section>
+  <header class="header">
+    <img alt="mobpex支付" src="../images/logo.jpg">
+    <p><span>让</span><span>支</span><span>付</span><span>更</span><span>便</span><span>捷</p>
+    </header>
+  <div class="content">
+
+  <!--   <h3><i class="iconfont success"></i>下单成功</h3> -->
+  <div class="pay-panel">
+    <div class="order-line">
+      <label>商品名称</label><div class="value" id="productName">Mobpex支付体验</div>
+    </div>
+    <div class="order-line">
+      <label>金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额</label><div class="value" id="amount"></div>
+    </div>
+</div>
+  <button type="button" class="btn" id="paynow">立即支付</button>
+   
+  </div>
+
+</section>
+ </form>
+<footer>
+  <div id="channels" class="pay-channel">
+
+  </div>
+</footer>
+<div class="modelback"></div>
+<script type="text/javascript" src="../script/utils.js"></script>
+<script type="text/javascript" src="../script/mobpex-js-sdk.js"></script>
+<script type="text/javascript" src="../script/your-js.js"></script>
+<script type="text/javascript" src="../script/ap.js"></script>
+<script>
+	var initParam = {//初始化页面参数
+		"orderInfo" : {// 订单信息
+			"orderNo" : "199810112011",
+			"productName" : "商品名称",//商品名称
+			"productDescription" : "商品描述",//商品描述
+			"amount" : "0.01",//商品金额
+			"payee" : "湖南易宝天创数据服务有限公司",//收款方 
+			"submitPayUrl" : "../demo/submitOrder" //提交订单url        
+		},
+		"channel" : [ 
+		         	{"payChannel":"ALIPAY","payType":"WAP","channelName":"支付宝&nbsp;&nbsp;&nbsp;","logo":"../images/iconfont-alipay.png"}
+					//,{"payChannel":"YEEPAY","payType":"WAP","channelName":"易宝支付","logo":"../images/iconfont-yeepay.png"} 
+					,{"payChannel":"UPACP","payType":"WAP","channelName":"银联支付","logo":"../images/yinliang.jpg"} 
+					,{"payChannel":"WECHAT","payType":"PUB","channelName":"微信支付","logo":"../images/iconfont-wechat.png"}
+					,{"payChannel":"ECITIC_WECHAT","payType":"WAP","channelName":"微信WAP(中信)","logo":"../images/iconfont-wechat.png"}
+					,{"payChannel":"ECITIC_WECHAT","payType":"NATIVE","channelName":"微信扫码(中信)","logo":"../images/iconfont-wechat.png"}
+					,{"payChannel":"ECITIC_WECHAT","payType":"PUB","channelName":"微信公众号(中信)","logo":"../images/iconfont-wechat.png"}
+					,{"payChannel":"ECITIC_ALIPAY","payType":"PUB","channelName":"支付宝服务号(中信)","logo":"../images/iconfont-alipay.png"}
+					,{"payChannel":"ECITIC_ALIPAY","payType":"NATIVE","channelName":"支付宝扫码(中信)","logo":"../images/iconfont-alipay.png"}
+/* ,{"payChannel":"JDPAY","payType":"WAP","channelName":"京东支付","logo":"../images/jdpay_logo.png"} */
+		],
+		"merchantUrl" : "https://www.mobpex.com"   //商户url
+	};
+	 
+</script>
+</body>
+</html>

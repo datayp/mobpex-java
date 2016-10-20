@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="keywords" content=""/>
+    <meta name="title" content="模拟支付渠道控件回调"/>
+    <meta name="description" content="模拟支付渠道控件回调"/>
+    <title>模拟支付渠道控件回调</title>
+	 
+	<link href="../css/bootstrapCustom.css" rel="stylesheet"> 
+	 <script language="javascript" >
+	    function payResult(para){
+			return window.jsObj.payResult(para);
+		}
+	 </script>
+</head>
+<body>
+	<table align="center"  >
+		<tr>
+			<td  align="center"><a class="navbar-brand" target="_blank"
+				href="https://www.mobpex.com"><img
+					alt="mobpex" src="../images/logo_lan.png" class="logo"></a></td>
+		</tr>
+		<tr>
+			<td  align="center"><span style="font-size: 16px">模拟支付渠道控件回调</span></td>
+		</tr>
+		<tr>
+			<td  align="center"><button type="button" class="btn btn-info " onclick="payResult(1)">支付成功</button></td>
+		</tr>
+		<tr>
+			<td  align="center"><button type="button" class="btn btn-info " onclick="payResult(2)">支付失败</button></td>
+		</tr>
+		<tr>
+			<td  align="center"><button type="button" class="btn btn-info " onclick="payResult(3)">取消支付</button></td>
+		</tr>
+	</table>
+</body>
+</html>

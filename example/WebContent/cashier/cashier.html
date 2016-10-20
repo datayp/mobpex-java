@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<title>魔派</title>
+<link href="css/cashier.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav>
+  <div class="navbar"><a class="navbar-brand" href="#"> <img alt="mobpex" src="images/logo-lan.jpg" class="logo"> </a><span class="page-title">收银台</span> </div>
+</nav>
+<div class="order-status"><i class="iconfont sucess">&#xe604;</i>
+  <div class="right">
+    <div class="line"> <span class="closeDIV" id="closeBtn">展开详情 <i class="iconfont">&#xe602;</i></span>
+      <h4>订单提交成功！请尽快支付！</h4>
+      <p>应付总金额 <strong>15200.00</strong> 元
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单号：20160505151512340000</p>
+    </div>
+    <div class="commodity-infor" id="commodityInfor">
+      <dl>
+        <dt>商品名称：</dt>
+        <dd>黑色裤子</dd>
+        <dd>蓝色外套</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="order-pay">
+    <h5>请选择以下方式付款</h5>
+    <ul class="paylist">
+      <li><img alt="mobpex" src="images/yeepay.jpg"></li>
+      <li><img alt="mobpex" src="images/alipay.jpg"></li>
+      <li><img alt="mobpex" src="images/unionpay.jpg"></li>
+      <li><img alt="mobpex" src="images/jdpay.jpg"></li>
+    </ul>
+  </div>
+</div>
+<script src="js/cashier.js"></script>
+</body>
+</html>

@@ -30,7 +30,6 @@ public class DemoTest extends TestCase {
     private String serverRoot = "https://www.mobpex.com/yop-center";
 	private String secretKey = "2121221";
 	private String appId = "15122404366710489367";
-	private String userId = "lofwqhen-1@ye12pay.com";
 	boolean ignoreSSLCheck = true;//测试时使用 正式上线应该设置为false 
 
 		
@@ -41,9 +40,6 @@ public class DemoTest extends TestCase {
 		MobpexConfig.setServerRoot(serverRoot);
 		MobpexConfig.setIgnoreSSLCheck(ignoreSSLCheck);
 		MobpexRequest request = new MobpexRequest();
-		request.setUserId(userId);
-		//request.setLiveMode(false);
-		//request.setFormat(ResponseFormatType.xml);
 		MobpexResponse response = MobpexClient.post("/rest/v1.0/query/findChannelInfoByAppId", request);
 		if(response.isValidSign())
 		{
@@ -62,8 +58,6 @@ public class DemoTest extends TestCase {
 		MobpexConfig.setServerRoot(serverRoot);
 		MobpexConfig.setIgnoreSSLCheck(ignoreSSLCheck);
 		MobpexRequest mobpexRequest = new MobpexRequest();
-		mobpexRequest.setUserId(userId);
-		//mobpexRequest.setLiveMode(false);
 		PrePayRequestDTO prePayRequestDTO = new PrePayRequestDTO();
 		prePayRequestDTO.setTradeNo("" + new Random().nextInt(Integer.MAX_VALUE));//此处填商户内部系统订单号
 		prePayRequestDTO.setPayChannel("JDPAY"); // WECHAwechat ALIPAY 
@@ -104,8 +98,7 @@ public class DemoTest extends TestCase {
 		MobpexConfig.setServerRoot(serverRoot);
 		MobpexConfig.setIgnoreSSLCheck(ignoreSSLCheck);
 		MobpexRequest request = new MobpexRequest();
-		Random r = new Random();
-		request.setUserId(userId);//  
+		Random r = new Random(); 
 		RefundRequestDTO refundRequest = new RefundRequestDTO();
 
 		refundRequest.setTradeNo("322523512494" ); // 商户订单号（商户退款流水号）
@@ -139,7 +132,6 @@ public class DemoTest extends TestCase {
 		MobpexConfig.setServerRoot(serverRoot);
 		MobpexConfig.setIgnoreSSLCheck(true);
 		MobpexRequest request = new MobpexRequest();
-		request.setUserId(userId);
 		request.addParam("tradeNo", "338215098");
 		request.addParam("refundNo", "760173609");
 
@@ -165,7 +157,6 @@ public class DemoTest extends TestCase {
 	
 		MobpexRequest request = new MobpexRequest();
 		//request.setLiveMode(false);
-		request.setUserId(userId);
 		request.addParam("tradeNo", "338215098");
 		MobpexResponse response = MobpexClient.post("/rest/v1.0/pay/queryPaymentOrder".toLowerCase(), request);
 		if(response.isValidSign())
@@ -188,7 +179,6 @@ public class DemoTest extends TestCase {
 		MobpexConfig.setServerRoot(serverRoot);
 		MobpexConfig.setIgnoreSSLCheck(ignoreSSLCheck);
 		MobpexRequest mobpexRequest = new MobpexRequest();
-		mobpexRequest.setUserId(userId);
 		MerPayRequestDTO merPayRequestDTO = new MerPayRequestDTO();		
 		merPayRequestDTO.setPayChannel("WECHAT");//发起支付的渠道
 		merPayRequestDTO.setPayType("CORP");		 //发起支付的类型
@@ -222,7 +212,6 @@ public class DemoTest extends TestCase {
 		MobpexConfig.setServerRoot(serverRoot);
 		MobpexConfig.setIgnoreSSLCheck(ignoreSSLCheck);
 		MobpexRequest mobpexRequest = new MobpexRequest();
-		mobpexRequest.setUserId(userId);
 		mobpexRequest.addParam("orderNo", "484141449");
 		MobpexResponse mobpexResponse = MobpexClient.post("/rest/v1.0/transfer/queryOrder" , mobpexRequest);
 		// prePayResponse = new Gson().fromJson(mobpexResponse.getStringResult(),  PrePayResponseDTO.class );
@@ -245,7 +234,6 @@ public class DemoTest extends TestCase {
 		MobpexConfig.setServerRoot(serverRoot);
 		MobpexConfig.setIgnoreSSLCheck(ignoreSSLCheck);
 		MobpexRequest mobpexRequest = new MobpexRequest();
-		mobpexRequest.setUserId(userId);
 		mobpexRequest.addParam("payChannel", "YEEPAY");
 		mobpexRequest.addParam("payType", "HELPBUY");
 		MobpexResponse mobpexResponse = MobpexClient.post("/rest/v1.0/transfer/queryBalance", mobpexRequest);

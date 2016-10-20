@@ -1,0 +1,406 @@
+
+
+/*==============================
+文件名称：mobpex收银台
+创建时间：20160607
+创 建 者：Jean peng
+版本：V1.0
+功能描述：mobpex收银台CSS
+
+===============================
+修 改 者：
+修改时间：
+修 改 点：
+==============================*/
+/*-------------------------------------------------------------------------------------------------------------------
+ 页面初始化
+-------------------------------------------------------------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  font-family:"微软雅黑",  "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+
+}
+html,body {
+  margin: 0px;
+  padding: 0px;
+  font-family:"微软雅黑",  "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  font-size:14px;
+  background: #fff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+/*-------------------------------------------------------------------------------------------------------------------
+ 图标
+-------------------------------------------------------------------------------------------------------------------*/
+@font-face {font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot'); /* IE9*/
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-fanhui:before { content: "\e605"; }
+.icon-cuowu:before { content: "\e603"; }
+.icon-fold:before { content: "\e601"; }
+.icon-unfold:before { content: "\e602"; }
+.icon-saoyisao:before { content: "\e600"; }
+.icon-dui-copy:before { content: "\e604"; }
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------
+ 收银台
+-------------------------------------------------------------------------------------------------------------------*/
+nav .navbar{
+	width: 1000px;
+	margin: 0 auto;
+}
+nav{
+	border-bottom: 1px solid #EBEBEB;
+	padding:15px 0 22px;
+}
+nav .logo{
+  display: inline-block;
+  float: left;
+}
+.page-title{
+	font-size: 22px;
+	color: #999;
+	border-left:1px solid #ccc;
+	padding-left: 10px;
+  display: inline-block;
+  margin-top: 4px;
+}
+.order-status,
+.order-pay,
+.weixing{
+	border:1px solid #EBEBEB;
+	padding: 30px;
+	margin-top:30px;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top:30px;
+}
+.weixing{
+  display: none;
+}
+.weixing:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.order-status:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.order-status > .iconfont{
+	font-size: 46px;
+    float: left; 
+    width: 46px;
+    margin-top:10px;
+}
+.order-status .right{
+	float: left; 
+	padding-left: 30px;
+	width: 850px;
+}
+.line{
+  padding-bottom: 15px;
+}
+.line > h4{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.line > p >strong{
+  color: #F20001;
+  font-size: 16px;
+}
+.line > p >strong:before{
+  content: "￥";
+  font-size: 14px;
+  font-weight: 400;
+}
+.order-status .right .closeDIV{
+ float: right;
+ cursor: pointer;
+}
+.commodity-infor{
+	clear: both;
+	background: #F7F7F7;
+	border: 1px solid #EBEBEB;
+	padding: 20px;
+  display: none;
+}
+.commodity-infor dl,.order-infor dl{
+	position: relative;
+	padding-left: 70px;
+}
+.commodity-infor dl dt,.order-infor dl dt{
+	position: absolute;
+	left: 0px;
+	font-weight: 500;
+}
+.paylist{
+	list-style: none;
+	padding: 0;
+}
+.paylist li{
+	display: inline-block;
+	border: 1px solid #EBEBEB;
+	margin: 10px 20px 20px 0;
+}
+.paylist li:hover{
+  border: 1px solid #d1d1d1;
+  cursor: pointer;
+}
+.sucess{
+	color: #489F34
+}
+h4,h5{
+	font-weight: 500;
+}
+.weixing > h5 >.right{
+  float: right;
+  cursor: pointer;
+}
+.weixing-pay{
+  width: 433px;
+  margin: 0 auto;
+  margin-top: 36px;
+  margin-bottom: 48px;
+}
+.weixing-pay:after{
+  content: "";
+  display: block;
+  clear:both;
+}
+.weixing-pay >.left{
+  width: 182px;
+  float: left;
+  border: 1px solid #CBCBCB;
+  padding: 8px 6px;
+  margin-top:18px;
+}
+
+.weixing-pay >.right{
+  width: 219px;
+  float: left;
+  padding-left: 32px;
+}
+.icop{
+  margin-top: 10px;
+}
+.icop > .iconfont{
+  float: left;
+  font-size: 26px;
+  color: #FF780C;
+  margin-right: 16px;
+  margin-left: 14px;
+}
+.icop >p{
+  float: left;
+  margin-top: -4px;
+}
+b.red{
+  color: #F20001;
+}
+.weixing-msg{
+  clear: both;
+  text-align:center;
+  margin-top: 30px;
+}
+/*-------------------------------------------------------------------------------------------------------------------
+弹出框组件
+-------------------------------------------------------------------------------------------------------------------*/
+.dialogue {
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  right: 35%;
+  z-index: 199999;
+  overflow: auto;
+  border: 0;
+  background: #fff;
+
+}
+.dialogue >article > .dialogue-header{
+  color: #999;
+  padding-left: 20px;
+  font-size: 16px;
+  background: #efefef;
+  height: 40px;
+  line-height: 40px;
+}
+.dialogue >article > .dialogue-header >.btn-close{
+  position: absolute;
+  right: 3px;
+  top:3px;
+  font-size: 22px;
+  background: none;
+  color: #999;
+}
+.dialogue >article > .dialogue-body{
+  padding: 20px;
+  text-align: center;
+}
+.dialogue > footer.dialogue-footer{
+  padding-bottom: 50px;
+  text-align: center;
+
+}
+.dialogue > footer.dialogue-footer >.btn{
+  padding:12px 30px;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  background: #fff;
+  color: #666;
+}
+.dialogue > footer.dialogue-footer > .btn.btn-info{
+  border: 1px solid #999;
+  color: #000;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}

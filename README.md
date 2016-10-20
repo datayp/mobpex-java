@@ -5,8 +5,8 @@
 
 ​        Mobpex Java SDK 采用https与Mobpex通信，支持RSA、MD5、SHA、SHA1等安全算法， SDK提供了API的请求封装、摘要签名、加解密、响应解释等基础功能，通过SDK能实现查询APP可用支付渠道列表、发起预支付请求、发起退款请求、支付查询、退款查询等业务。
 
-1. docs 目录下为 Mobpex Java SDK 的使用文档。
-2. example 目录下面为一个 Eclipse IDE 的示例工程。
+1. docs 目录下为 Mobpex Java SDK 的使用文档，开发请以官网网页版开发文档为准。
+2. example 目录下面为一个 JAVA版web工程源码，构建运行web工程后就可以进行支付测试，wap收银台测试地址为：http://127.0.0.1/mashup-demo-public/wechat/topay，pc收银台的测试地址为http://127.0.0.1/mashup-demo-public/cashier/pcPay.html，
 3. libs 为 Mobpex Java SDK 的 jar 包。
 
 ### 版本要求
@@ -120,6 +120,4 @@ if(mobpexResponse.isValidSign()){
 "validSign":true //SDK对签名进行验证的结果 为了安全起见商户系统需要当validSign为true才进行下一步操作 
 }
 ```
-
-
 

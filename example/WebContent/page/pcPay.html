@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Mobpex</title>
+<link rel="stylesheet" type="text/css" href="../styles/public.css">
+</head>
+<body>
+	<section>
+		<div class="content">
+			<h3>
+				<i class="iconfont success">&#xe616;</i>下单成功
+			</h3>
+			<div class="order-line">
+				<label>商户订单号</label>
+				<div class="value" id="orderNumber"></div>
+			</div>
+			<div class="order-line">
+				<label>付款金额</label>
+				<div class="value" id="amount">￥</div>
+			</div>
+			<div class="order-line">
+				<label>收款方</label>
+				<div class="value" id="payee"></div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="pay-channel" id="channelList">
+			<h4>支付渠道列表</h4>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript" src="../script/mobpex-js-sdk.js"></script>
+<script type="text/javascript" src="../script/your-js-forpc.js"></script>
+<script type="text/javascript" src="../script/ap.js"></script>
+<script>
+	var initParam = {//初始化页面参数
+		"orderInfo" : {// 订单信息
+			"orderNo" : 'test20160616180311',
+			"productName" : "商品名称",//商品名称
+			"productDescription" : "商品描述",//商品描述
+			"amount" : "0.01",//商品金额
+			"payee" : "湖南易宝天创数据服务有限公司",//收款方 
+			"submitPayUrl" : "../demo/submitOrderForPc"//提交订单url        
+		},
+		//"channel" : [ {"payChannel":"ALIPAY","payType":"PC"}, {"payChannel":"YEEPAY","payType":"PC"} , {"payChannel":"UPACP","payType":"PC"}],
+		"channel" : [ {"payChannel":"ALIPAY","payType":"WEB"},
+		              {"payChannel":"YEEPAY","payType":"WEB"}, 
+		              {"payChannel":"UPACP","payType":"WEB"}
+		              // {"payChannel":"JDPAY","payType":"WEB"}
+		              ],
+		"merchantUrl" : "https://www.mobpex.com"//商户url
+	};
+	window.onload = function() {
+		loadOrder(initParam, submitPay);
+	};
+     
+</script>
+</html>
